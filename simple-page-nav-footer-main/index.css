@@ -1,0 +1,100 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  
+  /* Navbar Styles */
+  
+  .navbar {
+    background-color: #232F3E;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .search-form {
+    margin-left: 30px;
+  }
+  
+  .search-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+  }
+  .navbar .logo{
+    color: #FF9900;
+  }
+  .search-form button[type="submit"] {
+    background-color: #FF9900;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .right-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-nav a {
+    margin-left: 20px;
+  }
+  
+  /* Footer Styles */
+  
+  .footer {
+    background-color: #232F3E;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+   
+  }
+  
+  
+  
+  /* Layout Styles */
+  
+  main {
+    padding: 60px; /* adjust to navbar height */
+    min-height: calc(100vh - 120px); /* adjust to navbar and footer height */
+  }
+  
+  /* Sticky Footer */
+  
+  .footer {
+    margin-top: auto;
+    width: 100%;
+  }
