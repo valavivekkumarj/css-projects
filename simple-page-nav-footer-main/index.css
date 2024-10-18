@@ -1,100 +1,169 @@
 /* Global Styles */
-
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #232F3E;
+  color: white;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #FF9900;
+}
+
+.hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  background-color: #FF9900;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-  }
-  
-  
-  .container {
-    display: flex;
+
+  .nav-links {
+    display: none;
     flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  
-  /* Navbar Styles */
-  
-  .navbar {
-    background-color: #232F3E;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 60px;
     left: 0;
     width: 100%;
-    z-index: 1;
-  }
-  
-  .navbar a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .search-form {
-    margin-left: 30px;
-  }
-  
-  .search-form input {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    width: 200px;
-  }
-  .navbar .logo{
-    color: #FF9900;
-  }
-  .search-form button[type="submit"] {
-    background-color: #FF9900;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .right-nav {
-    display: flex;
-    align-items: center;
-  }
-  
-  .right-nav a {
-    margin-left: 20px;
-  }
-  
-  /* Footer Styles */
-  
-  .footer {
     background-color: #232F3E;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-   
+    padding: 10px 0;
   }
-  
-  
-  
-  /* Layout Styles */
-  
-  main {
-    padding: 60px; /* adjust to navbar height */
-    min-height: calc(100vh - 120px); /* adjust to navbar and footer height */
+
+  .nav-links.active {
+    display: flex;
   }
-  
-  /* Sticky Footer */
-  
-  .footer {
-    margin-top: auto;
-    width: 100%;
+
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
   }
+}
+
+/* Footer */
+.footer {
+  background-color: #232F3E;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+}
+
+/* Main Content */
+main {
+  padding: 80px 20px; /* Adjusted to account for fixed navbar */
+  min-height: calc(100vh - 120px); /* Account for navbar and footer */
+}
+
+/* Course Cards */
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.course-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  margin: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.teacher-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.teacher-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.teacher-name {
+  font-size: 14px;
+  color: #555;
+}
